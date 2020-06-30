@@ -3,7 +3,7 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle
 } from 'reactstrap';
-
+import '../../src/App.css'
 
 function RenderDish({ dish }) {
     if (dish) {
