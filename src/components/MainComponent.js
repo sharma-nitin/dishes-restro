@@ -8,8 +8,10 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Contact from './ContactComponent';
 import { COMMENTS } from '../shared/comments';
 import { PROMOTIONS } from '../shared/promotions'; 
-import { LEADERS } from '../shared/leaders';
+import { LEADERS } from '../shared/leaders'; 
 import DishDetail from './DishdetailComponent';
+import About from './AboutComponent';
+
 import '../../src/App.css'
 
 class Main extends Component {
@@ -50,6 +52,7 @@ class Main extends Component {
           <Route path='/home' component={HomePage} />
           <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
           <Route exact path='/contactus' component={Contact} />
+          <Route exact path='/aboutus' component={() => <About leaders={this.state.leaders} />} />
           <Route path='/menu/:dishId' component={DishWithId} />
           <Redirect to="/home" />
         </Switch>
