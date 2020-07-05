@@ -25,16 +25,6 @@ const mapStateToProps = state => {
 
 class Main extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      dishes: DISHES,
-      comments: COMMENTS,
-      promotions: PROMOTIONS,
-      leaders: LEADERS
-    };
-  }
-
   render() {
 
     const DishWithId = ({match}) => {
@@ -60,7 +50,7 @@ class Main extends Component {
         <div>
           <Switch>
               <Route path='/home' component={HomePage} />
-              <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} />} />
+              <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} />
               <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
               <Route exact path='/contactus' component={Contact} />
