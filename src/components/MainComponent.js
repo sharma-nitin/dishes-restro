@@ -10,6 +10,7 @@ import DishDetail from './DishdetailComponent';
 import About from './AboutComponent';
 import '../../src/App.css'
 import { postComment, fetchDishes, fetchComments, fetchPromos } from '../redux/ActionCreators';
+import actions from 'react-redux-form';
 const mapStateToProps = state => {
   return {
     dishes: state.dishes,

@@ -58,7 +58,7 @@ export const fetchComments = () => (dispatch) => {
             throw errmess;
       })
     .then(response => response.json())
-    .then(comments => dispatch(addComments(comments)))
+    .then(comments => dispatch(addComment(comments)))
     .catch(error => dispatch(commentsFailed(error.message)));
 };
 
